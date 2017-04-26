@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html ng-app="AppModule" lang="en">
+<head>
+    <title ng-bind="Title"> </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Material design Angular resume Template">
+    <meta name="author" content="Abdallah Khalil">
+
+ <!--  Bootstrap Material Design  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
+    <link href="./Content/styles.css" rel="stylesheet">
+</head>
+<body ng-cloak class="page-brand" id="contents" ng-style="bodyStyle" >
+
+    <!-- The Main Navigation in the Template-->
+    <header class="header   header-waterfall ui-header affix-top" ng-class="headerBackClass" id="ui_menu">
+        <div ng-include="'NgApp/Common/Views/NavBar.html'"></div>
+    </header>
+    <!-- The SideBar Navigation That appear in small Devices-->
+    <nav aria-hidden="true" class="menu ui_menu" id="leftBar" tabindex="-1">
+        <div ng-include="'NgApp/Common/Views/LeftMenu.html'"></div>
+    </nav>
+    <!-- The Right SideBar With Quick Send Mail And links -->
+    <nav aria-hidden="true" class="menu menu-right sendMessage" id="rightBar" tabindex="-1">
+        <div ng-include="'NgApp/Common/Views/RightMenu.html'"></div>
+    </nav>
+    <!-- Main Router Template -->
+    <main class="content">
+        <div>
+            <div ng-view></div>
+        </div>
+    </main>
+    <!-- Footer Template -->
+    <div ng-include="'NgApp/Common/Views/footer.html'"></div>
+
+    <!-- Button to change Color Theme Of the Template -->
+    <div class="float-center-left card-1" ng-style="cardStyle">
+        <a class="btn btn-default padding-10 btn-sm waves-effect waves-attach waves-ripple " ng-click="changeStyle('whiteStyle');">
+            White Theme
+        </a>       
+        <div class="row row-centered">
+            <span data-balloon="Theme Editor" data-balloon-pos="right" class="pull-right settings card-1" ng-style="cardStyle"><i class="fa fa-sliders fa-lg" ng-class="textClass"></i></span>
+            <a class="fbtn fbtn-brand inline-display waves-effect waves-attach waves-circle waves-light" ng-click="changeStyle('turnBlue');"></a>
+            <a class="fbtn fbtn-green inline-display waves-effect waves-attach waves-circle waves-light" ng-click="changeStyle('turnGreen');"></a>
+        </div>
+        <div class="row row-centered">
+            <a class="fbtn fbtn-brand-accent inline-display waves-effect waves-attach waves-circle waves-light" ng-click="changeStyle('turnAccent');"></a>
+            <a class="fbtn fbtn-purple inline-display waves-effect waves-attach waves-circle waves-light" ng-click="changeStyle('turnPurple');"></a>
+        </div>
+        <div class="row row-centered">
+            <a class="fbtn fbtn-teal inline-display waves-effect waves-attach waves-circle waves-light" ng-click="changeStyle('turnTeal');"></a>
+            <a class="fbtn fbtn-orange inline-display waves-effect waves-attach waves-circle waves-light" ng-click="changeStyle('turnOrange');"></a>
+        </div>
+        <a class="btn btn-black padding-10 btn-sm waves-effect waves-attach waves-ripple waves-light" ng-click="changeStyle('darkStyle');">
+            black Theme
+        </a>
+    </div>
+
+    <!-- Buttons to move to top of the page and Enter FullScreen-->
+    <div class="fbtn-container-right">
+        <a class="fbtn waves-attach waves-circle  waves-effect margin-right-sm" ng-click="goFullscreen();">
+            <span class="fbtn-text fbtn-text-left"> Full Screen</span>  <i class="fa fa-tv"></i>
+        </a>
+        <a class="fbtn fbtn-lg  waves-attach waves-circle waves-light waves-effect " ng-class="fbtnClass" ng-click="toTheTop()">
+            <span class="fbtn-text fbtn-text-left"> Move Up</span><i class="material-icons">keyboard_arrow_up</i>
+        </a>
+    </div>
+
+    <!-- Button To open the RightSideBar the Have Quick actions-->
+    <div class="fbtn-container">
+        <div class="fbtn-inner">
+            <a class="fbtn fbtn-lg  waves-attach waves-circle waves-effect waves-ripple" ng-class="fbtnClass" data-toggle="dropdown">
+                <span class="fbtn-text fbtn-text-right">Social</span>
+                <span class="fbtn-ori icon">language</span><span class="fbtn-sub icon">close</span>
+            </a>
+            <div class="fbtn-dropup">               
+                <a class="fbtn  waves-attach waves-circle waves-light waves-effect" data-toggle="menu" href=".sendMessage">
+                    <span class="fbtn-text fbtn-text-right"> Mail Me!</span>  <i class="fa fa-send"></i>
+                </a>               
+            </div>
+        </div>
+    </div>
+
+    <!-- Slocial Modals -->
+    <div ng-include="'NgApp/Common/Views/Partials/socialModal.html'"></div>
+
+
+
+
+    <!-- Splash Screen -->
+    <script src="./Scripts/please-wait.min.js"></script>
+    <script type="text/javascript">
+        window.loading_screen = window.pleaseWait({
+            logo: "./images/logo-cap.png",
+            backgroundColor: '#3F51B5',
+            loadingHtml: "<div class='spinner1'><div class='dot1'></div><div class='dot2'></div></div>"
+        });
+    </script>
+
+    <!-- Main Module  -->
+    <script src="./NgApp/build/main.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+﻿<div class="container">
+    <h2 class="section-title">Pricing</h2>
+    <div class="row row-centered  margin-bottom-lg">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 margin-top-sm col-lg-4">
+                <div class="panel   price panel-grey not-visible" when-visible="fadeInLeftElement">
+                    <div class="panel-heading  text-center">
+                        <h3>Basic PLAN</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px"><strong>$20 / month</strong></p>
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Personal use</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Unlimited projects</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> 27/7 support</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> <del>Lorem Ipsum Servise 6</del></li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> <del>Ipsum Servise 2</del></li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> <del>Servise</del></li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> <del>Lorem Servise 6</del></li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block waves-attach waves-effect  waves-ripple" href="#">BUY NOW!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-top-sm">
+                <div class="panel   price not-visible" when-visible="fadeInDownElement" ng-class="panelClass">
+                    <div class="panel-heading  text-center">
+                        <h3>PRO PLAN</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px"><strong>$60 / month</strong></p>
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Personal use</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Unlimited projects</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> 27/7 support</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Lorem Ipsum Servise 6</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Ipsum Servise 2</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> <del>Servise</del></li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> <del>Lorem Servise 6</del></li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block waves-attach waves-effect  waves-ripple " ng-class="btnClass" href="#">BUY NOW!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-top-sm">
+                <div class="panel   price panel-grey not-visible" when-visible="fadeInRightElement">
+                    <div class="panel-heading  text-center">
+                        <h3>Advanced PLAN</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:40px"><strong>$100 / month</strong></p>
+                    </div>
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Personal use</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Unlimited projects</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> 27/7 support</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Lorem Ipsum Servise 6</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Ipsum Servise 2</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Servise</li>
+                        <li class="list-group-item"><i class="fa fa-check" ng-class="textClass"></i> Lorem Servise 6</li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block waves-attach waves-effect  waves-ripple " href="#">BUY NOW!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12 col-md-12  col-xs-12 col-sm-12 padding-top padding-left padding-right padding-bottom col-centered margin-top-lg
+             not-visible" when-visible="pulseElement">
+            <slick dots="false" infinite="true" speed="2500" fade="false" slides-to-show="5" arrows="false"
+                   autoplay="true" touch-move="true" swipe="true" slides-to-scroll="3" responsive="vm.responsiveCleintSlik">
+                <div class="col-lg-2 text-center" ng-repeat="img in vm.clientImages">
+                    <img ng-src="{{img.imageUrl}}" class="img-responsive opacityHover" alt="{{img.alt}}" />
+                </div>
+            </slick>
+        </div>
+
+
+        <div class="margin-top-lg col-lg-12 col-md-12  col-xs-12 col-sm-12">
+            <div class="section-txt-btn margin-top-lg not-visible" when-visible="fadeInDownElement">
+                <p>
+                    I am pretty flexible and ready to move forward to my clients with additional requirements or with changing existing requirements.
+                    For any additional packages please contact me <a href="#" class="" ng-class="textClass">Directly</a>.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>

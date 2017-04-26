@@ -1,0 +1,131 @@
+﻿<div class="fixed-box animated fadeInDown">
+    <a class="fbtn fbtn-lg waves-effect waves-attach waves-circle waves-light" ng-class="fbtnClass" ng-click="closeRightMenu();">
+        <i class="fa fa-close text-white"></i>
+    </a>
+</div>
+<div class="menu-scroll" ng-style="footerStyle">
+    <div class="transparent">
+        <div class="padding-40">
+            <img alt="polla" src="././././images/users/hero.png" class="right-img-1">
+        </div>
+        <div class="caption-title">
+            <div class="padding-left-sm" ng-class="textClass" href="javascript:void(0)">
+                <span class="avatar avatar-inline margin-right">
+                    <img alt="alt text for John Smith avatar" src="././././images/users/avatar-001.jpg">
+                </span>
+                <strong class="name">Abdallah Khalil</strong>
+                <small class="padding-top-sm margin-no job" ng-class="textClass">Creative web developer</small>
+            </div>
+        </div>
+        <div class="margin-top">
+            <div class="padding-10">
+                <form class="form-horizontal text-left form" ng-submit="vm.sendMail();" name="vm.sendMailForm" novalidate="novalidate">
+                    <h3 class="border-top padding-top-lg text-white">Contact Me</h3>
+                    <div class="form-group form-group-white form-group-label form-group-lg ">
+                        <label class="floating-label" for="name">Name</label>
+                        <input class="form-control" name="name" type="text" ng-model="vm.mail.name" ng-required="true">
+                        <div class="form-help" ng-messages="vm.sendMailForm.name.$error" ng-if="vm.sendMailForm.name.$dirty">
+                            <p class="text-brand-accent" ng-message="required">Please,enter subject</p>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-white form-group-label form-group-lg ">
+                        <label class="floating-label" for="email">Email</label>
+                        <input class="form-control" name="email" type="text" ng-model="vm.mail.email" ng-required="true">
+                        <div class="form-help" ng-messages="vm.sendMailForm.email.$error" ng-if="vm.sendMailForm.email.$dirty">
+                            <p class="text-brand-accent" ng-message="required">Please,enter your email</p>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-white form-group-label form-group-lg ">
+                        <label class="floating-label" for="subject">Subject</label>
+                        <input class="form-control" name="subject" type="text" ng-model="vm.mail.subject" ng-required="true">
+                        <div class="form-help" ng-messages="vm.sendMailForm.subject.$error" ng-if="vm.sendMailForm.subject.$dirty">
+                            <p class="text-brand-accent" ng-message="required">Please,enter subject</p>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-white form-group-label form-group-lg ">
+                        <label class="floating-label" for="message">Message</label>
+                        <textarea class="form-control" name="message" type="text" ng-model="vm.mail.message" ng-required="true" id="message" rows="3"></textarea>
+                        <div class="form-help" ng-messages="vm.sendMailForm.message.$error" ng-if="vm.sendMailForm.message.$dirty">
+                            <p class="text-brand-accent" ng-message="required">Please,enter Message</p>
+                        </div>
+                    </div>
+
+                    <button ng-disabled="vm.sendMailForm.$invalid" type="submit" class="btn pull-right btn-lg btn-default  waves-ripple waves-attach waves-effect">
+                        Send
+                        <i class="fa fa-send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="margin-top-lg transparent padding-10">
+            <h3 class="text-white border-top padding-top">Search ...</h3>
+            <input class="form-control" ng-class="searchBoxClass" type="text" name="search" placeholder="Search Text" />
+            <a class="margin-top-minus pull-right" href=""><i class="fa fa-search"></i></a>
+        </div>
+        <div class="margin-top-lg padding-10">
+            <h3 class="text-white border-top padding-top">Quick links </h3>
+            <ul class="nav">
+                <li class="tile transparent">
+                    <a class="waves-attach waves-effect waves-light text-white waves-ripple" href="javascript:void(0)">
+                        Profile Settings
+                        <span class="menu-collapse-toggle collapsed" data-target=".ui_menu_profile_settings" data-toggle="collapse">
+                            <span class="menu-collapse-toggle-close">
+                                <i class="icon icon-lg">close</i>
+                            </span>
+                            <span class="menu-collapse-toggle-default">
+                                <i class="icon icon-lg">add</i>
+                            </span>
+                        </span>
+                    </a>
+                    <ul class="menu-collapse collapse ui_menu_profile_settings" id="">
+                        <li class="tile padding-left-lg transparent">
+                            <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">First Item</a>
+                        </li>
+                        <li class="tile padding-left-lg transparent">
+                            <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">Another Item</a>
+                        </li>
+                        <li class="tile padding-left-lg transparent">
+                            <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">Something Else</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="tile transparent">
+                    <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">Upload Photo</a>
+                </li>
+                <li class="tile transparent">
+                    <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">Log in</a>
+                </li>
+            </ul>
+        </div>
+        <div class="margin-top padding-10">
+            <h3 class="text-white border-top padding-top">Tags </h3>
+            <a class="btn margin-top waves-attach waves-effect  waves-ripple " href="#">Creative</a>
+            <a class="btn margin-top waves-attach waves-effect  waves-ripple " href="#">Web Design</a>
+            <a class="btn margin-top waves-attach waves-effect  waves-ripple " href="#">Web Development</a>
+            <a class="btn margin-top waves-attach waves-effect  waves-ripple " href="#">Bootstrap</a>
+            <a class="btn margin-top waves-attach waves-effect  waves-ripple " href="#">Material Design</a>
+            <a class="btn margin-top waves-attach waves-effect  waves-ripple " href="#">New Themes</a>
+        </div>
+        <div class="margin-top-lg padding-10">
+            <h3 class="text-white border-top padding-top">Recent posts </h3>
+            <ul class="nav padding-10">
+                <li class="padding-10 border-top">
+                    <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">How to start selling themes online</a>
+                </li>
+                <li class="padding-10 border-top">
+                    <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">Envato: Can selling a WordPress theme on ThemeForest become your daily income</a>
+                </li>
+                <li class="padding-10 border-top">
+                    <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">The Envato knowledgebase is pretty comprehensive and gives authors guidelines</a>
+                </li>
+                <li class="padding-10 border-top">
+                    <a class="waves-attach waves-effect waves-ripple waves-light text-white" href="javascript:void(0)">I assume you have the technical know-how to create templates and themes.  If not, then that's</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+

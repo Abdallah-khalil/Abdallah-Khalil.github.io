@@ -1,0 +1,76 @@
+﻿<div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="row row-centered isotope-header">
+        <div class="col-xs-12 col-sm-9 col-md-7 col-lg-6 col-centered iso-col iso-top-header-nav  not-visible" ng-class="welAfter" when-visible="fadeInDownElement">
+            <nav class="tab-nav" ng-class="tabNav">
+                <ul class="nav  nav-list" opt-kind ok-key="filter">
+                    <li>
+                        <a class="waves-attach waves-effect waves-ripple active" ng-class="welAfter" ok-sel="*">All</a>
+                    </li>
+                    <li>
+                        <a class='waves-attach waves-effect waves-ripple' ng-class="welAfter" ok-sel=".Art">Art</a>
+                    </li>
+                    <li>
+                        <a class='waves-attach waves-effect waves-ripple' ng-class="welAfter" ok-sel=".Accessories">Accessories</a>
+                    </li>
+                    <li>
+                        <a class='waves-attach waves-effect waves-ripple' ng-class="welAfter" ok-sel=".Design">Design</a>
+                    </li>
+                    <li>
+                        <a class='waves-attach waves-effect waves-ripple' ng-class="welAfter" ok-sel=".Fashion">Fashion</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="addActionBtn">
+                <a class="fbtn fbtn-lg  waves-attach waves-circle waves-light waves-effect " ng-class="fbtnClass" ng-click="vm.addToList()">
+                    <span class="fbtn-text fbtn-text-left"> Add New </span><i class="fa fa-plus"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section-box padding-top-lg" ng-class="cardClass">
+        <div class="row row-centered not-visible iso-tope-cont margin-top-lg" id="isotopeContainer"
+              isotope-container="isotope-container" when-visible="pulseElement">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-top col-centered iso-col {{x.class}}" 
+                 ng-repeat="x in vm.xList" isotope-item="isotope-item">
+                <div class="box">
+                    <img class="img-responsive" ng-src="{{x.image}}" />
+                    <div class="overbox">
+                        <div class="title overtext"> {{x.name}} </div>
+                        <div class="tagline overtext">
+                            <a class="btn btn-lg  waves-attach waves-effect  waves-ripple" animated-modal href="#descModal" options="options"><span class="icon">check</span> More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="descModal" ng-style="footerStyle">
+    <div class="margin-top-lg row row-centered">
+        <div class="close-descModal">
+            <a class="fbtn fbtn-lg  waves-effect  waves-attach waves-circle slideUp">
+                <span class="fbtn-text fbtn-text-right"> غلق </span><i class="fa fa-close "></i>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="container margin-top-lg" style="background-color:transparent;">
+            <div class="margin-top-lg row row-centered">
+                <i class="fa fa-5x text-white fa-briefcase"></i><br />
+                <h1 class="page-header text-white modalTitle">
+                    Your  Header
+                </h1>
+                <p class="text-white modalDesc">
+                    Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit,
+                    vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.dunt integer eu augue augue nunc elit dolor,
+                    luctus placerat scelerisque euismod,
+                    iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>

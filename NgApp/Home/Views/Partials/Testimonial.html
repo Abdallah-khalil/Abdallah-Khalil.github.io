@@ -1,0 +1,64 @@
+﻿<h2 class="section-title text-white">Testimonials</h2>
+<div class="container-fluid">
+    <section class="container margin-top margin-bottom-lg">
+        <div class="row">            
+                <div class="col-sm-4 padding-20">
+                    <div class="card-1 box text-center waves-attach waves-circle waves-effect waves-light">
+                        <div class="padding-top-lg padding-bottom not-visible"  when-visible="testSection">
+                            <i class="fa fa-3x fa-smile-o text-gold"></i>
+                        </div>
+                        <h1 class="countDown text-white"  count-up id="clientCount" ng-model="vm.clientCount.count">0</h1>
+                        <h5 class="testTitle text-gold">Happy clients</h5>
+                    </div>
+                </div>  
+                <div class="col-sm-4 padding-20">
+                    <div class="card-1 box text-center waves-attach waves-circle waves-effect waves-light">
+                        <div class="padding-top-lg padding-bottom  not-visible" when-visible="testSection">
+                            <i class="fa fa-3x fa-cog text-gold"></i>
+                        </div>
+                        <h1 class="countDown text-white"  count-up id="projectCount" ng-model="vm.projectCount.count">
+                            0
+                        </h1>
+                        <h5 class="testTitle text-gold">Completed Project</h5>
+                    </div>
+                </div>  
+                <div class="col-sm-4 padding-20">
+                    <div class="card-1 box text-center waves-attach waves-circle waves-effect waves-light">
+                        <div class="padding-top-lg padding-bottom not-visible"  when-visible="testSection">
+                            <i class="fa fa-3x fa-graduation-cap text-gold"></i>
+                        </div>
+                        <h1 class="countDown text-white"  count-up id="awardCount" ng-model="vm.awardCount.count">0</h1>
+                        <h5 class="testTitle text-gold">Award Won</h5>
+                    </div>
+                </div>              
+        </div>
+        <div class="row row-centered margin-top-lg margin-bottom-lg">
+            <div class="col-lg-12 col-md-12  col-xs-12 col-sm-12 col-centered not-visible"  when-visible="flipInXElement">
+                <slick dots="true" infinite="false" speed="4000" fade="false" arrows="false" slides-to-show="1" autoplay="true" touch-move="true" swipe="true" slides-to-scroll="1">
+                    <div class="row" ng-repeat="visitor in vm.visitors">
+                        <aside class="col-lg-3 col-md-3 col-lg-offset-0 col-md-offset-0 col-sm-6 col-xs-6 col-xs-offset-3 col-sm-offset-3" id="tesImage">
+                            <div class="margin-top padding-10">
+                                <img ng-src="{{visitor.imageUrl}}" class="img-responsive img-circle  " />
+                            </div>
+                        </aside>
+                        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">                           
+                            <div class="row card-1 border-radius">
+                                <div class="col-slg-8 col-md-8 col-sm-8 col-xs-12 text-left">
+                                    <h1 class="testHeading  ">{{visitor.name}} <span class="bloqCompany"> {{visitor.pos}}</span></h1>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 icon-bloq  ">
+                                    <i class="fa fa-4x fa-quote-right yellow-qoute"></i>
+                                </div>
+                                <div class="col-xs-12 text-center margin-top-lg">
+                                    <p class="blockquote " ng-style="borderStyle">
+                                       {{visitor.comment}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </slick>
+            </div>            
+        </div>
+    </section>
+</div>
